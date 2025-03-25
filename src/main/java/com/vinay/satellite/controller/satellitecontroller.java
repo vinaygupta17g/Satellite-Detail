@@ -14,7 +14,7 @@ public class satellitecontroller {
     @Autowired
     private satelliteservice satelliteservice;
 
-    @PostMapping
+    @PostMapping("/satinsert")
     public satellite addSatellite(@RequestBody satellite satellite)
     {
         return satelliteservice.saveSatellite(satellite);
