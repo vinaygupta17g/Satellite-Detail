@@ -12,9 +12,9 @@ import java.util.List;
 public class satellitecontroller {
 
     @Autowired
-    satelliteservice satelliteservice;
+    private satelliteservice satelliteservice;
 
-    @PostMapping()
+    @PostMapping
     public satellite addSatellite(@RequestBody satellite satellite)
     {
         return satelliteservice.saveSatellite(satellite);
