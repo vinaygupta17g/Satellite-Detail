@@ -5,5 +5,4 @@ import java.util.List;
 public interface satelliteservice {
     satellite saveSatellite(satellite satellite);
     List<satellite> getSatellite();
-
 }
