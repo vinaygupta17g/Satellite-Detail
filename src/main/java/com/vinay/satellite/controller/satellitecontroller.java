@@ -35,4 +35,15 @@ public class satellitecontroller {
     {
         return satelliteservice.getSatelliteByName(name);
     }
+    @PutMapping("updatesatellite/{id}")
+    public satellite updatesatellite(@PathVariable Integer id,@RequestBody satellite satellite)
+    {
+        return satelliteservice.updatesatellite(id,satellite);
+    }
+    @DeleteMapping("deletesatellite/{id}")
+    public String deletesatellite(@PathVariable Integer id)
+    {
+        satelliteservice.deletesatellite(id);
+        return id+" deleted ";
+    }
 }

@@ -7,4 +7,6 @@ public interface satelliteservice {
     List<satellite> getSatellite();
     satellite getSatelliteById(Integer id);
     List<satellite> getSatelliteByName(String name);
+    satellite updatesatellite(Integer id,satellite satellite);
+    void deletesatellite(Integer id);
 }
