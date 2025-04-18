@@ -25,4 +25,14 @@ public class satellitecontroller {
     {
         return satelliteservice.getSatellite();
     }
+    @GetMapping("getsatellite/{id}")
+    public satellite getSatelliteById(@PathVariable Integer id)
+    {
+        return satelliteservice.getSatelliteById(id);
+    }
+    @GetMapping("getsatellitebyname/{name}")
+    public List<satellite> getSatelliteByName(@PathVariable String name)
+    {
+        return satelliteservice.getSatelliteByName(name);
+    }
 }

@@ -21,4 +21,13 @@ public class satelliteserviceimplementation implements satelliteservice {
     {
         return satelliterepo.findAll();
     }
+
+    public satellite getSatelliteById(Integer id)
+    {
+        return satelliterepo.findById(id).orElseThrow(null);
+    }
+    public List<satellite> getSatelliteByName(String name)
+    {
+        return satelliterepo.findBySatname(name);
+    }
 }
