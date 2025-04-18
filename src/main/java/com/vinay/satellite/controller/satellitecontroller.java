@@ -14,13 +14,13 @@ public class satellitecontroller {
     @Autowired
     private satelliteservice satelliteservice;
 
-    @PostMapping
+    @PostMapping("postsatellite")
     public satellite addSatellite(@RequestBody satellite satellite)
     {
         return satelliteservice.saveSatellite(satellite);
     }
 
-    @GetMapping
+    @GetMapping("getsatellite")
     public List<satellite> getAllStudent()
     {
         return satelliteservice.getSatellite();
